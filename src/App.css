@@ -36,3 +36,109 @@
     transform: rotate(360deg);
   }
 }
+
+.wrapper-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.remove-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.button-theme {
+  --color: #6a5af9;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  padding: 15px 30px;
+  width: 200px;
+  border-radius: 4px;
+  background-color: var(--color);
+  cursor: pointer;
+  font-weight: 500;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transition: all 0.2s linear;
+  margin: 20px 0;
+}
+.button-theme:hover {
+  transform: rotateY(-15deg);
+}
+
+.wrapper-input {
+  margin-top: 30px;
+}
+
+#form {
+  width: 400px;
+  padding: 10px;
+  font-size: 18px;
+  outline: none;
+  background: linear-gradient(to left top, #000, #22132e) fixed;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.8);
+  transition: all 0.5s;
+}
+
+#form:hover {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+#form:focus {
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background: linear-gradient(to left top, #000, #4e2d69) fixed;
+}
+
+.todo-list {
+  margin: 20px auto;
+  width: 40%;
+  height: 250px;
+}
+
+.wrapper-item {
+  font-size: 30px;
+  padding: 5px 0;
+  cursor: pointer;
+  width: 100%;
+}
+
+.wrapper-button {
+  margin-top: 10px;
+}
+
+.btn-toggle-all {
+  background: #373b44; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #4286f4,
+    #373b44
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #4286f4,
+    #373b44
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.btn-all {
+  width: 100px;
+  margin: 0 20px;
+  background: #8360c3; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2ebf91,
+    #8360c3
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2ebf91,
+    #8360c3
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  padding: 15px 10px;
+}

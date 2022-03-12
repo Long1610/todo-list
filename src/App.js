@@ -4,6 +4,7 @@ import styled, { ThemeProvider, createGlobalStyle } from "styled-components";
 import Context from "./store/context";
 import { addToDo, removeToDo, changeStatus, updateTodo } from "./store/actions";
 import TodoList from "./containers/TodoList";
+import { useDarkMode } from "./hooks/useDarkMode";
 
 const lightTheme = {
   textColor: "#000",
@@ -37,17 +38,9 @@ const Button = styled.button`
 
 function App() {
   const [state, dispatch] = useContext(Context);
-  const [theme, setTheme] = useState("light");
+  const [theme, toggleTheme] = useDarkMode();
   const [arr, setArr] = useState([]);
   const [status, setStatus] = useState("");
-
-  const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-    } else {
-      setTheme("light");
-    }
-  };
 
   const onDetele = (id) => {
     dispatch(removeToDo(id));

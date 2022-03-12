@@ -6,10 +6,10 @@ const List = styled.ul`
   overflow-y: ${(props) => props.isMax && "auto"};
 `;
 const TodoList = ({ data, onDelete, changeStatus }) => {
-  const isMax = data.length > 5;
+  const isMax = data?.length > 5;
   return (
     <List className="todo-list" isMax={isMax}>
-      {data.map((x) => (
+      {data?.map((x) => (
         <TodoItem
           key={x.id}
           item={x}

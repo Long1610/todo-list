@@ -89,6 +89,7 @@
 #form:hover {
   border: 2px solid rgba(255, 255, 255, 0.5);
 }
+
 #form:focus {
   border: 2px solid rgba(255, 255, 255, 0.5);
   background: linear-gradient(to left top, #000, #4e2d69) fixed;
@@ -112,33 +113,11 @@
 }
 
 .btn-toggle-all {
-  background: #373b44; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #4286f4,
-    #373b44
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #4286f4,
-    #373b44
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: green;
 }
 
 .btn-all {
   width: 100px;
   margin: 0 20px;
-  background: #8360c3; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #2ebf91,
-    #8360c3
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #2ebf91,
-    #8360c3
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
   padding: 15px 10px;
 }

@@ -14,6 +14,7 @@ const TodoItem = ({ item, onDelete, changeStatus }) => {
         isDone={isDone}
         onClick={changeStatus}
         className="wrapper-item"
+        data-testid="todo"
       >
         <span>{item.title}</span>
         <img
@@ -21,6 +22,7 @@ const TodoItem = ({ item, onDelete, changeStatus }) => {
           alt="remove"
           className="remove-icon"
           onClick={onDelete}
+          data-testid="deleteButton"
         />
       </TextChange>
     </>

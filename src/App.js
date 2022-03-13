@@ -109,11 +109,12 @@ function App() {
             Toggle All
           </button>
           <div className="filter">
-            {arrButton.map((x) => (
+            {arrButton.map((x, id) => (
               <Button
                 className="button-theme btn-all"
                 onClick={() => setStatus(x.value)}
                 isActive={status === x.value}
+                key={id}
               >
                 {x.title}
               </Button>

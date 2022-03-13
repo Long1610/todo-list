@@ -102,10 +102,17 @@
 }
 
 .wrapper-item {
-  font-size: 30px;
   padding: 5px 0;
-  cursor: pointer;
   width: 100%;
+}
+
+.wrapper-item > span {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.wrapper-item > img {
+  cursor: pointer;
 }
 
 .wrapper-button {

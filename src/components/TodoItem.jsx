@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled, { keyframes, css } from "styled-components";
 
-const transform = keyframes`
+const transformY = keyframes`
   from {
     transform: translateY(-200px);
   }
@@ -11,13 +11,13 @@ const transform = keyframes`
   }
 `;
 
-const fadeout = keyframes`
+const transformX = keyframes`
   from {
-    transform: translateY(0);
+    transform: translateX(0);
   }
 
   to {
-    transform: translateY(-1000px);
+    transform: translateX(-1000px);
   }
 `;
 
@@ -27,10 +27,10 @@ const TextChange = styled.li`
   animation: ${({ isDelete }) =>
     isDelete
       ? css`
-          ${fadeout} 0.7s ease-in-out
+          ${transformX} 0.5s ease-in-out
         `
       : css`
-          ${transform} 0.5s ease-in-out
+          ${transformY} 0.5s ease-in-out
         `};
 `;
 
@@ -40,19 +40,18 @@ const TodoItem = ({ item, onDelete, changeStatus }) => {
 
   const handleDelete = () => {
     setIsDelete(true);
-    onDelete();
+    setTimeout(onDelete, 500)
   };
 
   return (
     <>
       <TextChange
         isDone={isDone}
-        onClick={changeStatus}
         data-testid="todo"
         isDelete={isDelete}
       >
         <div className="wrapper-item">
-          <span>{item.title}</span>
+          <span onClick={changeStatus}>{item.title}</span>
           <img
             src="remove.png"
             alt="remove"
